@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Bull | Weekly PnL Leaderboard</title>
+    <meta name="description" content="Trade Bull — Weekly PnL leaderboard, community trading education and rankings.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <meta property="og:title" content="Trade Bull | Weekly PnL Leaderboard">
+    <meta property="og:description" content="Weekly leaderboard of community traders — see top PnL and styles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header class="top-header">
-    <a href="index.html" class="logo">🐂 Trade Bull</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="top-header" role="banner">
+    <h1 class="site-title"><a href="index.html" class="logo" aria-label="Trade Bull home"><span aria-hidden="true">🐂</span> Trade Bull</a></h1>
 
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="signin.html">Sign In</a>
-        <a href="signup.html" class="signup-btn">Sign Up</a>
+    <nav class="nav-links" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
     </nav>
 </header>
 
-<main class="container">
+<main id="main-content" class="container">
 
     <!-- Weekly Winner -->
     <section class="winner">
         <h2>🏆 Weekly Winner</h2>
-        <div class="winner-card">
+        <div class="winner-card" aria-live="polite" aria-atomic="true">
             <h3 id="winnerName">Loading...</h3>
             <p>PnL: <span id="winnerPnl"></span></p>
             <p>Return: <span id="winnerPercent"></span></p>
@@ -46,12 +56,12 @@
 <footer>
     © 2025 Trade Bull | Educational & Community Initiative <br>
     Follow us:
-    <a href="#">Telegram</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">YouTube</a>
+    <a href="#" aria-label="Telegram">Telegram</a> |
+    <a href="#" aria-label="Instagram">Instagram</a> |
+    <a href="#" aria-label="YouTube">YouTube</a>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

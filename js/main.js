@@ -15,16 +15,37 @@ const participants = [
     { name: "Rahul", pnl: "+₹980" }
 ];
 
-// Inject Winner
-document.getElementById("winnerName").innerText = weeklyWinner.name;
-document.getElementById("winnerPnl").innerText = weeklyWinner.pnl;
-document.getElementById("winnerPercent").innerText = weeklyWinner.percent;
-document.getElementById("winnerStyle").innerText = weeklyWinner.style;
+function safeText(id, value) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = value;
+}
+
+// Inject Winner (use textContent to avoid XSS)
+safeText("winnerName", weeklyWinner.name);
+safeText("winnerPnl", weeklyWinner.pnl);
+safeText("winnerPercent", weeklyWinner.percent);
+safeText("winnerStyle", weeklyWinner.style);
 
 // Inject Participants
 const list = document.getElementById("participantList");
 
-participants.forEach(trader => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-        <span>${
+if (list) {
+    if (participants.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'No participants yet.';
+        list.appendChild(li);
+    } else {
+        participants.forEach(trader => {
+            const li = document.createElement('li');
+            li.textContent = `${trader.name} — ${trader.pnl}`;
+            list.appendChild(li);
+        });
+    }
+}
+
+// Helper: If in future you receive raw numbers, format them here.
+function formatCurrency(amount) {
+    // Placeholder: expects a pre-formatted string like "+₹1,234". Implement parsing if needed.
+    return amount;
+}

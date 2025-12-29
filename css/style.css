@@ -91,11 +91,30 @@ footer {
     color: #22c55e;
 }
 
+.nav-links {
+    /* container for the ul */
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
 .nav-links a {
     color: #cbd5e1;
-    margin-left: 20px;
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 6px;
 }
 
 .nav-links a:hover {
@@ -103,10 +122,12 @@ footer {
 }
 
 .signup-btn {
-    padding: 6px 12px;
-    border-radius: 5px;
+    padding: 8px 14px;
+    border-radius: 8px;
     background: #22c55e;
     color: #020617 !important;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(34,197,94,0.12);
 }
 
 /* Mobile Menu */
