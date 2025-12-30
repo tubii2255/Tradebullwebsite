@@ -3,7 +3,6 @@
 TradeBull Website is a **community-driven web project** focused on building a transparent trading-related platform.  
 This project is created **purely for learning, collaboration, and real-world practice**.
 
-I’m looking for **2 motivated contributors** who have **free time to spare** and are willing to learn and build together.
 
 ---
 
@@ -93,15 +92,7 @@ tradebullwebsite/
 
 ---
 
-## 🤝 Looking for Contributors
 
-I’m looking for **2 contributors** who:
-- Have **free time**
-- Are comfortable with **HTML / CSS / JavaScript** (or willing to learn)
-- Want **real project experience**
-- Are okay collaborating via **GitHub**
-
-You don’t need to be an expert — **consistency matters more than skill level**.
 
 ---
 
