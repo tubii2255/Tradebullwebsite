@@ -69,6 +69,39 @@ footer {
     background: #020617;
     color: #94a3b8;
 }
+footer a:hover {
+  opacity: .8;
+  transform: scale(1.05);
+}
+
+footer .social i {
+  font-size: 1.4rem;
+  margin: 0 6px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer a svg {
+  width: 28px;
+  height: 28px;
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
