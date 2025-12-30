@@ -69,6 +69,39 @@ footer {
     background: #020617;
     color: #94a3b8;
 }
+footer a:hover {
+  opacity: .8;
+  transform: scale(1.05);
+}
+
+footer .social i {
+  font-size: 1.4rem;
+  margin: 0 6px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer a svg {
+  width: 28px;
+  height: 28px;
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -130,9 +163,117 @@ footer {
     box-shadow: 0 4px 10px rgba(34,197,94,0.12);
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #22c55e;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Mobile Menu */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* later we add hamburger menu */
+    .top-header {
+        padding: 18px 20px;
     }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Reset and hide nav-links by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: #020617;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+        padding: 80px 20px 20px;
+        overflow-y: auto;
+        display: block;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* For pages with ul/li structure (index.html) */
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    /* For pages with direct <a> tags - make them stack vertically */
+    .nav-links > a {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* All links should be full width and stacked */
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .signup-btn {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #22c55e;
+    color: #020617;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
