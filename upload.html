@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Bull | Upload Your Trade</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional styles for upload page */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, textarea, button {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #1b5e20;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2e7d32;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .optional {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-header" role="banner">
+    <h1 class="site-title"><a href="index.html" class="logo" aria-label="Trade Bull home"><span aria-hidden="true">🐂</span> Trade Bull</a></h1>
+</header>
+
+<main class="container">
+    <h1>📤 Upload Your Trade</h1>
+    <p style="text-align:center;">Share your screenshot, strategy, and optionally your photo & social media links.</p>
+
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="strategy">Your Strategy:</label>
+        <textarea id="strategy" name="strategy" rows="4" placeholder="Describe your trading strategy..." required></textarea>
+
+        <label for="screenshot">Screenshot:</label>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+
+        <label for="photo">Your Photo <span class="optional">(optional)</span>:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <label for="social">Social Media Link <span class="optional">(optional)</span>:</label>
+        <input type="url" id="social" name="social" placeholder="e.g., https://instagram.com/yourprofile">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="index.html" class="back-link">⬅ Back to Home</a>
+</main>
+
+<footer>
+    © 2025 Trade Bull | Educational & Community Initiative <br>
+    Follow us:
+    <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+</footer>
+
+</body>
+</html>
